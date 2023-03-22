@@ -1,22 +1,3 @@
-	DROP TABLE books;
-	
-	CREATE TABLE IF NOT exists books (
-		id BIGSERIAL PRIMARY KEY,
-		author VARCHAR(255),
-		isbn VARCHAR(17) UNIQUE,
-		publishing_house VARCHAR(255),
-		publishing_year SMALLINT,
-		type_of_cover VARCHAR(255),
-		number_of_pages SMALLINT,
-		price DECIMAL(5,2)
-	);
-	
-	ALTER TABLE books ADD COLUMN title VARCHAR (255);
-	
-	ALTER TABLE books ADD CONSTRAINT constraint_name UNIQUE (isbn);
-	
-	Alter TABlE IF exists books
-	OWNER to postgres;
 
 	INSERT INTO books(author, isbn, title, publishing_house, publishing_year, type_of_cover, number_of_pages, price)
 	VALUES
@@ -41,8 +22,8 @@
 	('Наталья Щерба', '978-5-353-05333-0', 'Часодеи. Часовой ключ', 'РОСМЭН', 2019, 'Твердый переплет', 368, null),
 	('Наталья Щерба', '978-5-353-05547-1', 'Часодеи. Часовое сердце', 'РОСМЭН', 2019, 'Твердый переплет', 400, 25.93),
 	('Айан Натан', '978-5-04-170670-8', 'Джеймс Кэмерон. Иллюстрированная биография. От "Титаника" до "Аватара"', 'Бомбора', 2022, 'Твердый переплет', 240, 112.75);
-	
-	SELECT * FROM books;
+
+
 	
 	
 	
